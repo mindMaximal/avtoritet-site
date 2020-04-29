@@ -704,12 +704,18 @@ object {
 			&--symbol {
 				width: 685px;
 				height: 570px;
+				transform: rotate(55deg);
+				right: -20%;
 			}
 			
 			&--bg {
-				transform: scale(0.4) rotate(194deg);
-				bottom: 0;
-				left: -65%;
+				transform: scale(.6) rotate(241deg);
+				top: -2%;
+				left: -46%;
+			}
+
+			&--right {
+				display: none;
 			}
 		}
 	}
@@ -724,6 +730,7 @@ object {
 
 			&--right {
 				margin-left: 0;
+				padding-left: 0;
 			}
 		}
 
@@ -737,6 +744,11 @@ object {
 				width: 440px;
 				height: 370px;
 				bottom: 0;
+			}
+
+			&--right {
+				margin-top: 20px;
+				display: block;
 			}
 			
 			&--bg {
@@ -851,6 +863,48 @@ object {
 }
 
 @include media-breakpoint-down(md) {
+	.staff-card {
+		max-width: none;
+		margin-bottom: 30px;
+		
+		&__img {
+			width: 135px;
+			height: 210px;
+			flex-shrink: 0;
+			margin: 0 15px 0 0;
+
+			img {
+				height: 100%;
+			}
+		}
+
+		&__position {
+			min-height: 50px;
+			margin-bottom: 10px;
+			align-items: flex-start;
+		}
+
+		&__wrapper {
+			display: flex;
+			align-items: flex-start;
+		}
+
+		&__name {
+			font-size: 15px;
+			padding-bottom: 5px;
+		}
+
+		&__list {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		&__elem {
+			font-size: 14px;
+			line-height: 20px;
+			margin-bottom: 5px;
+		}
+	}
 }
 
 @include media-breakpoint-down(sm) {
@@ -859,6 +913,10 @@ object {
 		margin-top: 30px;
 		margin-left: auto;
 		margin-right: auto;
+
+		&__wrapper {
+			flex-direction: column;
+		}
 
 		&__position {
 			min-height: 0;
@@ -1330,10 +1388,6 @@ object {
 			margin-bottom: 10px;
 		}
 
-		&__50 {
-			width: 100%;
-		}
-
 		&--margin {
 
 			&-left {
@@ -1356,6 +1410,10 @@ object {
 
 		&__symbol {
 			margin-left: -25px;
+		}
+
+		&__50 {
+			width: 100%;
 		}
 	}
 }
@@ -1546,7 +1604,15 @@ object {
 
 @include media-breakpoint-down(md) {
 	.work {
-		
+
+		&__wrapper {
+			flex-wrap: wrap;
+		}
+
+		&__item {
+			max-width: 35%;
+			margin-bottom: 30px;
+		}
 	}
 }
 
@@ -2212,7 +2278,6 @@ object {
 
         &__wrapper {
             max-width: 387px;
-            background-image: url('../img/popup/768.jpg');
         }
 
         &__title {
