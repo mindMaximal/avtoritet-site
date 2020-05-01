@@ -60,12 +60,12 @@
 				<label for="nav-button">Меню</label>
 			</div>
 			
-			<ul class="nav__list flex flex--space-between flex--tablet-column">
-				<li class="nav__elem"><a href="#" class="nav__link">Медицинская лицензия</a></li>
-				<li class="nav__elem"><a href="#" class="nav__link">Образовательная лицензия</a></li>
-				<li class="nav__elem"><a href="#" class="nav__link">Фармацевтическая лицензия</a></li>
-				<li class="nav__elem"><a href="#" class="nav__link">Лицензия МЧС</a></li>
-				<li class="nav__elem"><a href="#" class="nav__link">Проверки Роспотребнадзора</a></li>
+			<ul class="nav__list flex flex--space-between flex--tablet-column tabs-trigger__container tabs-trigger__container--speed">
+				<li class="nav__elem"><a href="#tabs" class="nav__link tabs-trigger">Медицинская лицензия</a></li>
+				<li class="nav__elem"><a href="#tabs" class="nav__link tabs-trigger">Образовательная лицензия</a></li>
+				<li class="nav__elem"><a href="#tabs" class="nav__link tabs-trigger">Фармацевтическая лицензия</a></li>
+				<li class="nav__elem"><a href="#tabs" class="nav__link tabs-trigger">Лицензия МЧС</a></li>
+				<li class="nav__elem"><a href="#tabs" class="nav__link tabs-trigger">Проверки Роспотребнадзора</a></li>
 			</ul>
 
 		</div>
@@ -104,7 +104,7 @@
 
 					<div class="about__advantage advantage font--montserrat">
 						<div class="advantage__num">
-							1.
+							<img src="img/about/icon(2).svg" alt="Icon">
 						</div>
 						<div class="advantage__text">
 							РАБОТАЕМ С <span class="color--green">2012</span> ГОДА
@@ -113,7 +113,7 @@
 
 					<div class="about__advantage advantage font--montserrat">
 						<div class="advantage__num">
-							2.
+							<img src="img/about/icon(1).svg" alt="Icon">
 						</div>
 						<div class="advantage__text">
 							ПОЛУЧЕНО БОЛЕЕ <span class="color--green">300</span> ЛИЦЕНЗИЙ
@@ -122,14 +122,14 @@
 
 					<div class="about__advantage advantage font--montserrat">
 						<div class="advantage__num">
-							3.
+							<img src="img/about/icon(3).svg" alt="Icon">
 						</div>
 						<div class="advantage__text">
 							БОЛЕЕ <span class="color--green">150</span> КОМПАНИЙ ЗА ПОСЛЕДНИЕ 2 ГОДА
 						</div>
 					</div>
 
-					<p class="about__text--bottom hidden--tablet">
+					<p class="about__text--bottom hidden--tablet hidden--mobile">
 						Внимательность, ответственное отношение к работе, постоянное совершенствование наших качеств позволяет обеспечить продвижение Вашего бизнеса к успеху.
 					</p>
 
@@ -137,7 +137,7 @@
 
 				<div class="about__block about__block--right font--montserrat flex flex--align-center">
 
-					<img class="about__img--right" src="img/about/img.jpg" alt="Image">
+					<img class="about__img--right" src="img/about/img.png" alt="Image">
 
 					<img class="about__img--symbol" src="img/about/symbol.svg" alt="Symbol V">
 					<img class="about__img--bg" src="img/about/symbol.svg" alt="Symbol V">
@@ -146,7 +146,7 @@
 
 			</div>
 
-			<p class="about__text--bottom hidden--desktop hidden--mobile">
+			<p class="about__text--bottom hidden--desktop">
 				Внимательность, ответственное отношение к работе, постоянное совершенствование наших качеств позволяет обеспечить продвижение Вашего бизнеса к успеху.
 			</p>
 		</div>
@@ -160,7 +160,6 @@
 			<div class="staff__wrapper flex flex--space-between flex--wrap">
 
 				<div class="staff__card staff-card">
-					<div class="staff-card__position">Генеральный директор</div>
 					<div class="staff-card__wrapper">
 						<div class="staff-card__img">
 							<picture class="feedback__slide glide__slide">
@@ -172,6 +171,7 @@
 						</div>
 						<div class="staff-card__info">
 							<div class="staff-card__name">Синьшинова Анастасия Сергеевна</div>
+							<div class="staff-card__position">Генеральный директор</div>
 							<ul class="staff-card__list txt__list">
 								<li class="staff-card__elem txt__elem">Высшее юридическое образование</li>
 								<li class="staff-card__elem txt__elem">Общий юридический 
@@ -183,7 +183,6 @@
 				</div>
 
 				<div class="staff__card staff-card">
-					<div class="staff-card__position">Главный специалист, заместитель руководителя</div>
 					<div class="staff-card__wrapper">
 						<div class="staff-card__img">
 							<picture>
@@ -195,6 +194,7 @@
 						</div>
 						<div class="staff-card__info">
 							<div class="staff-card__name">Налетова Ирина Ивановна</div>
+							<div class="staff-card__position">Главный специалист, заместитель руководителя</div>
 							<ul class="staff-card__list txt__list">
 								<li class="staff-card__elem txt__elem">Высшее юридическое образование</li>
 								<li class="staff-card__elem txt__elem">Стаж в области лицензирования 8 лет</li>
@@ -204,8 +204,6 @@
 				</div>
 
 				<div class="staff__card staff-card">
-					<div class="staff-card__position">Менеджер 
-						по управлению</div>
 					<div class="staff-card__wrapper">
 						<div class="staff-card__img">
 							<picture>
@@ -217,6 +215,7 @@
 						</div>
 						<div class="staff-card__info">
 							<div class="staff-card__name">Шолохова Ирина Александровна</div>
+							<div class="staff-card__position">Менеджер по управлению</div>
 							<ul class="staff-card__list txt__list">
 								<li class="staff-card__elem txt__elem">Высшее юридическое образование</li>
 								<li class="staff-card__elem txt__elem">Общий юридический стаж 43 года</li>
@@ -227,7 +226,6 @@
 				</div>
 
 				<div class="staff__card staff-card">
-					<div class="staff-card__position">Помощник юриста</div>
 					<div class="staff-card__wrapper">
 						<div class="staff-card__img">
 							<picture>
@@ -239,6 +237,7 @@
 						</div>
 						<div class="staff-card__info">
 							<div class="staff-card__name">Болотникова Любовь Сергеевна</div>
+							<div class="staff-card__position">Помощник юриста</div>
 							<ul class="staff-card__list txt__list">
 								<li class="staff-card__elem txt__elem">Высшее юридическое образование</li>
 							</ul>
@@ -248,8 +247,8 @@
 
 			</div>
 
-			<img class="staff__symbol--left" src="img/about/symbol.svg" alt="Symbol V">
-			<img class="staff__symbol--right" src="img/about/symbol.svg" alt="Symbol V">
+			<!-- <img class="staff__symbol--left" src="img/about/symbol.svg" alt="Symbol V">
+			<img class="staff__symbol--right" src="img/about/symbol.svg" alt="Symbol V"> -->
 
 		</div>
 	</section>
@@ -1458,12 +1457,12 @@
 
 				<div class="help__block help__block--right">
 
-					<ul class="help__list font--montserrat">
-						<li class="help__elem"><a href="#" class="help__link">Медицинская лицензия</a></li>
-						<li class="help__elem"><a href="#" class="help__link">Образовательная лицензия</a></li>
-						<li class="help__elem"><a href="#" class="help__link">Лицензия МЧС</a></li>
-						<li class="help__elem"><a href="#" class="help__link">Фармацевтическая лицензия</a></li>
-						<li class="help__elem"><a href="#" class="help__link">Проверки Роспотребнадзора</a></li>
+					<ul class="help__list font--montserrat  tabs-trigger__container tabs-trigger__container--speed">
+						<li class="help__elem"><a href="#tabs" class="help__link tabs-trigger">Медицинская лицензия</a></li>
+						<li class="help__elem"><a href="#tabs" class="help__link tabs-trigger">Образовательная лицензия</a></li>
+						<li class="help__elem"><a href="#tabs" class="help__link tabs-trigger">Лицензия МЧС</a></li>
+						<li class="help__elem"><a href="#tabs" class="help__link tabs-trigger">Фармацевтическая лицензия</a></li>
+						<li class="help__elem"><a href="#tabs" class="help__link tabs-trigger">Проверки Роспотребнадзора</a></li>
 					</ul>
 
 				</div>
