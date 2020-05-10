@@ -163,7 +163,12 @@ function ready() {
     });
 
       //Scroll
-      try {
+
+    function scrollCallback() {
+        console.log('scrolled');
+    }
+
+    try {
         var linkNav = document.querySelectorAll('[href^="#"]'),
         speed = 0.8; 
     
@@ -173,13 +178,14 @@ function ready() {
             e.preventDefault();
             
             var w = window.pageYOffset,
-                hash = this.href.replace(/[^#]*(.*)/, '$1');
+                hash = this.href.replace(/[^#]*(.*)/, '$1'),
+                offset = 0;
 
             if (hash == '#') {
                 return false;
             }
             
-            if(this.classList.contains('tabs-trigger')) {
+            if(this.classList.contains('tabs-trigger') && !this.classList.contains('tabs-trigger--bottom')) {
                 var index = this.getAttribute('data-index');
                 
                 if(this.closest('.tabs-trigger__container').classList.contains('tabs-trigger__container--speed')) {
@@ -194,16 +200,32 @@ function ready() {
                     document.querySelector('.tabs__item--active').classList.remove('tabs__item--active');
                 }
                 
-                setTimeout(function () {
+                document.querySelector('.service-card[data-index="' + index + '"]').classList.toggle('service-card--active');
+                document.querySelector('.tabs__item[data-index="' + index + '"]').classList.toggle('tabs__item--active');
+                
+            } else if (this.classList.contains('tabs-trigger--bottom') && this.classList.contains('tabs-trigger--bottom')) {
+                offset = document.querySelector('.services').offsetHeight;
+                speed = 0.3;
+                var index = this.getAttribute('data-index');
+
+                if(document.querySelector('.service-card--active')) {
+                    document.querySelector('.service-card--active').classList.remove('service-card--active');
+                }
+
+                if(document.querySelector('.tabs__item--active')) {
+                    document.querySelector('.tabs__item--active').classList.remove('tabs__item--active');
+                }
+                
+                function scrollCallback() {
                     document.querySelector('.service-card[data-index="' + index + '"]').classList.toggle('service-card--active');
                     document.querySelector('.tabs__item[data-index="' + index + '"]').classList.toggle('tabs__item--active');
-    
-                }, 0);
+                }
+
             } else if (hash == '#tabs' && !document.querySelector('.tabs__item--active')) {
                 return false;
             }
                 
-            t = document.querySelector(hash).getBoundingClientRect().top,
+            t = document.querySelector(hash).getBoundingClientRect().top - offset,
                 start = null;             
             requestAnimationFrame(step);
 
@@ -211,12 +233,13 @@ function ready() {
                 if (start === null) start = time;
                 var progress = time - start,
                     r = (t < 0 ? Math.max(w - progress/speed, w + t) : Math.min(w + progress/speed, w + t));
-                    
+                
                 window.scrollTo(0,r);
                                 
                 if (r != w + t) {
                     requestAnimationFrame(step);
                 } else {
+                    scrollCallback();
                     location.hash = hash;
                 }
             }
