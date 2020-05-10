@@ -155,7 +155,6 @@ object {
 	}
 }
 
-
 .flex {
 	display: flex;
 
@@ -257,6 +256,10 @@ object {
 	&--nowrap {
 		white-space: nowrap;
 	}
+
+	&--italic {
+		font-style: italic;
+	}
 }
 
 .color {
@@ -318,6 +321,14 @@ object {
 		font-weight: 600;
 	}
 
+	&--width {
+		width: 80%;
+	}
+
+	&--medium {
+		font-weight: 500;
+	}
+
 	&--margin {
 
 		&-right {
@@ -335,6 +346,10 @@ object {
 		&-bottom {
 			margin-bottom: 40px;
 		}
+	}
+
+	&--decoration {
+		text-decoration: underline;
 	}
 
 	&__link {
@@ -483,6 +498,10 @@ object {
 			margin-bottom: 0;
 		}
 	}
+
+	p {
+		font-family: $mns;
+	}
 }
 
 @include media-breakpoint-down(md) {
@@ -558,6 +577,10 @@ object {
 		}
 	}
 
+	&__text {
+		font-family: opensans,sans-serif;
+	}
+
 	&__num {
 		font-size: 30px;
 	}
@@ -580,6 +603,7 @@ object {
 
 	&__logo {
 		flex-shrink: 0;
+		max-width: 300px;
 	}
 
 	&__elem {
@@ -852,6 +876,14 @@ object {
 		margin-top: 25px;
 		display: block;
 		min-width: 280px;
+	}
+
+	&__privacy {
+		margin-top: 15px;
+
+		a {
+			color: $btn;
+		}
 	}
 }
 
@@ -1337,7 +1369,7 @@ object {
 	min-height: 400px;
 	overflow: hidden;
 	border: 1px solid #EEEFF3;
-
+	color: inherit;
 	&__bg {
 		position: absolute;
 		top: 0;
@@ -1346,7 +1378,6 @@ object {
 		left: 0;
 		z-index: -1;
 		opacity: 0;
-
 		img {
 			height: 100%;
 		}
@@ -1710,6 +1741,10 @@ object {
 		&:last-of-type {
 			margin-bottom: 0;
 		}
+	}
+
+	&__slide {
+		text-align: center;
 	}
 	
 	&__block {

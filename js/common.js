@@ -116,7 +116,7 @@ function ready() {
 		el.closest('.service-card').setAttribute('data-index', i);
 		i++;
 
-		el.addEventListener('click', function (e) {
+		el.closest('.service-card').addEventListener('click', function (e) {
 			e.preventDefault();
 			
             var parent = this.closest('.service-card');
@@ -236,6 +236,29 @@ function ready() {
         })
     }    
 
+
+    if (document.querySelector(".feedback__more")) {
+        var feedbackBlock = document.querySelector(".feedback__block")
+        var feedbackMore = document.querySelector(".feedback__more")
+        var feedbackItem = feedbackBlock.querySelectorAll('.feedback__item')
+        feedbackMore.addEventListener("click", function() {
+            var index
+            feedbackItem.forEach((element) => {
+                var styled = element.style.display
+                if(styled === "block") {
+                    element.style.display = "none"
+                    index = Number(element.dataset.taindex)
+                }
+            });
+            if (index >= feedbackItem.length-1) {
+                index = -1
+            }
+            feedbackItem[index+1].style.display = "block"
+            feedbackItem[index+2].style.display = "block"
+        })
+
+    }
+
     var homeMask = IMask(
         document.getElementById('home-input'), {
           mask: '+{7}(000)000-00-00'
@@ -245,7 +268,7 @@ function ready() {
         document.getElementById('popup-input'), {
             mask: '+{7}(000)000-00-00'
     });
-        
+    
 }
 
 var popupContacts;
