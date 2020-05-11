@@ -1545,6 +1545,17 @@ object {
 	padding-bottom: 125px;
 	padding-top: 125px;
 
+	&--without-img {
+		padding-bottom: 100px;
+
+		.proposal {
+
+			&__wrapper {
+				margin-left: 0;
+			}
+		}
+	}
+
 	&__wrapper {
 		margin-left: 40%;
 		max-width: 630px;
@@ -1553,9 +1564,17 @@ object {
 	&__img {
 		position: absolute;
 		left: 0;
-		bottom: 0;
+		bottom: 45px;
 		max-width: 360px;
 		max-height: 500px;
+
+		&--photo {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			max-width: 360px;
+			max-height: 500px;
+		}
 	}
 	
 	&__title {
