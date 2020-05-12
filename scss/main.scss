@@ -1177,8 +1177,7 @@ object {
 		img,
 		picture {
 			width: 100%;
-			filter: blur(1px);
-		}
+				}
 	}
 
 	&__info {
@@ -1206,6 +1205,21 @@ object {
 			top: 8px;
 			left: -8px;
 		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.staff-card {
+
+		&__img {
+
+			img,
+			picture {
+				width: 100%;
+				filter: blur(0.5px);
+			}
+		}
+	
 	}
 }
 
