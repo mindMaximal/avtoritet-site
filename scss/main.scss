@@ -1172,22 +1172,12 @@ object {
 		}
 	}
 
-	&:nth-child(1) img {
-		-ms-interpolation-mode: optimizeQualityDeprecatedNon;
-		image-rendering: optimizeQualityDeprecatedNon;
-	}
-
-	&:nth-child(2) img {
-		-ms-interpolation-mode: optimizeSpeedDeprecatedNon;
-		image-rendering: optimizeSpeedDeprecatedNon;
-	}
-
 	&__img {
 
 		img,
 		picture {
 			width: 100%;
-			image-rendering: optimizeQuality;
+			filter: blur(1px);
 		}
 	}
 
