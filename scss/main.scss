@@ -1172,6 +1172,14 @@ object {
 		}
 	}
 
+	&__img {
+
+		img,
+		picture {
+			width: 100%;
+		}
+	}
+
 	&__info {
 		width: 100%;
 	}
@@ -1381,14 +1389,6 @@ object {
 		opacity: 0;
 		img {
 			height: 100%;
-		}
-	}
-
-	&__img {
-
-		img,
-		picture {
-			width: 100%;
 		}
 	}
 
