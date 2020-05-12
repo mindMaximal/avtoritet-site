@@ -1177,6 +1177,7 @@ object {
 		img,
 		picture {
 			width: 100%;
+			image-rendering: optimizeQuality;
 		}
 	}
 
