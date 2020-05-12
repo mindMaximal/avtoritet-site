@@ -1385,8 +1385,9 @@ object {
 	}
 
 	&__img {
-		
-		img {
+
+		img,
+		picture {
 			width: 100%;
 		}
 	}
